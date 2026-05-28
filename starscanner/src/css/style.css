@@ -1,0 +1,160 @@
+:root {
+    --deep-space-background: #0A0C1A;
+    --navy-panel: #101428;
+    --dark-panel: #282E50;
+    --star-gold: #E8C45A;
+    --light-gold: #FFFBE8;
+    --nebula-purple: #7850C8;
+    --light-purple: #B48CFF;
+    --aurora-teal: #38BDBE;
+    --muted-gray: #5A6482;
+    --light-gray: #A0AAC8;
+    --success-green: #80C878;
+    --error-red: #DC5050;
+    --white: #FFFFFF;
+
+    --font-display: "Orbitron", sans-serif;
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.75rem;
+    --text-2xl: 2.5rem;
+
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: var(--deep-space-background);
+    color: var(--light-gray);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--white);
+    line-height: 1.2;
+    margin: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+}
+
+a {
+    text-decoration: none;
+    color: var(--aurora-teal);
+}
+
+a:hover {
+    color: var(--star-gold);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    background-color: var(--navy-panel);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--space-md);
+}
+
+nav span {
+    font-family: var(--font-display);
+    color: var(--star-gold);
+    margin-right: auto;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--light-gray);
+    font-size: var(--text-sm);
+    padding: var(--space-sm);
+}
+
+nav button.active {
+    color:var(--star-gold);
+    border-bottom: 2px solid var(--star-gold);
+}
+
+nav button:hover {
+    color: var(--white);
+}
+
+#section-dashboard {
+    padding: var(--space-md);
+}
+
+#dashboard-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 300px;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+#dashboard-left,
+#upcoming-events,
+#dashboard-right,
+#location-panel,
+#weather-panel,
+#observing-score,
+#journal-quick-add,
+#apod-panel,
+#iss-tracker {
+    background-color: var(--dark-panel);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    border: 1px solid var(--muted-gray);
+}
+
+@media (max-width: 768px){
+    #dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 390px){
+    nav span {
+        font-size: var(--text-sm);
+    }
+    nav, #section-dashboard{
+        padding: var(--space-sm);
+    }
+}
