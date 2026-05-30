@@ -1,0 +1,68 @@
+[
+    {
+        "id": "eta-aquariid-2026",
+        "name": "Eta Aquariid Meteor Shower",
+        "type": "meteor",
+        "date": "2026-05-06",
+        "endDate": "2026-05-07",
+        "time": "02:00",
+        "description": "Peak activity — up to 50 meteors per hour",
+        "radiant": "Aquarius",
+        "tip": "Best viewed after midnight, away from city lights"
+    },
+    {
+        "id": "summer-solstice-2026",
+        "name": "Summer Solstice",
+        "type": "moon",
+        "date": "2026-06-21",
+        "endDate": "2026-06-21",
+        "time": "06:24",
+        "description": "Longest day of the year in the Northern Hemisphere",
+        "radiant": null,
+        "tip": "Great night to observe noctilucent clouds at high latitudes"
+    },
+    {
+        "id": "jupiter-opposition-2026",
+        "name": "Jupiter at Opposition",
+        "type": "planet",
+        "date": "2026-07-14",
+        "endDate": "2026-07-14",
+        "time": "22:00",
+        "description": "Jupiter is at its closest and brightest — magnitude -2.8",
+        "radiant": null,
+        "tip": "Even binoculars will show Jupiter's four Galilean moons"
+    },
+    {
+        "id": "perseid-peak-2026",
+        "name": "Perseid Meteor Shower",
+        "type": "meteor",
+        "date": "2026-08-12",
+        "endDate": "2026-08-13",
+        "time": "22:00",
+        "description": "Peak activity — up to 100 meteors per hour",
+        "radiant": "Perseus",
+        "tip": "No equipment needed — find a dark spot and look northeast"
+    },
+    {
+        "id": "partial-lunar-eclipse-2026",
+        "name": "Partial Lunar Eclipse",
+        "type": "eclipse",
+        "date": "2026-08-28",
+        "endDate": "2026-08-28",
+        "time": "04:12",
+        "description": "Moon passes through Earth's shadow — 94% coverage",
+        "radiant": null,
+        "tip": "Visible with the naked eye — watch the shadow creep across the moon"
+    },
+    {
+        "id": "leonid-peak-2026",
+        "name": "Leonid Meteor Shower",
+        "type": "meteor",
+        "date": "2026-11-17",
+        "endDate": "2026-11-18",
+        "time": "01:00",
+        "description": "Peak activity — up to 15 meteors per hour",
+        "radiant": "Leo",
+        "tip": "Best viewed in the pre-dawn hours facing east"
+    }
+]

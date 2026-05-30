@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarScanner</title>
+    <meta name="description" content="Discover tonight's astronomical events, track the ISS live, and log your personal sky observations from anywhere in the world.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet">
+    <script type="module" crossorigin src="/StarScanner/assets/index-RsKyzMJ5.js"></script>
+    <link rel="stylesheet" crossorigin href="/StarScanner/assets/index-Cc_vkDr7.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>StarScanner</h1>
+        <button data-section="dashboard" class="active">Dashboard</button>
+        <button data-section="journal">Journal</button>
+        <button data-section="skymap">Sky Map</button>
+        <button data-section="settings">Settings</button>
+      </nav>
+    </header>
+    <main>
+      <section id="section-dashboard" aria-label="Tonight's sky events and ISS tracker" class="active">
+        <h2>Dashboard</h2>
+        <div id="tonight-banner">
+          <p></p>
+          <button id="surprise-btn">✦ Surprise Me!</button>
+        </div>
+        <div id="dashboard-grid">
+          <div id="dashboard-left">
+            <div id="location-panel"></div>
+            <div id="weather-panel"></div>
+            <div id="observing-score">
+              <h3>7-Night Cloud Cover</h3>
+              <canvas id="cloud-chart" width="260" height="120"></canvas>
+            </div>
+            <div id="journal-quick-add"></div>
+          </div>
+          <div id="upcoming-events"></div>
+          <div id="dashboard-right">
+            <div id="apod-panel"></div>
+            <div id="iss-tracker">
+              <h3>🛸 ISS Live Position</h3>
+              <div id="iss-map">
+                <div id="iss-marker"></div>
+              </div>
+              <div id="iss-data"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section-journal" aria-label="Personal sky observation journal" class="hidden">
+        <h2>Journal</h2>
+        <div id="journal-form-container">
+          <h3>New Entry</h3>
+          <input id="journal-date" type="date">
+          <input id="journal-location" type="text" placeholder="Location">
+          <textarea id="journal-notes" placeholder="What did you observe tonight?"></textarea>
+          <div id="journal-rating">
+            <button data-rating="1">1</button>
+            <button data-rating="2">2</button>
+            <button data-rating="3">3</button>
+            <button data-rating="4">4</button>
+            <button data-rating="5">5</button>
+          </div>
+          <button id="journal-submit">Save Entry</button>
+        </div>
+        <input id="journal-search" type="text" placeholder="Search past entries...">
+        <div id="journal-list"></div>
+      </section>
+      <section id="section-skymap" aria-label="Interactive sky map" class="hidden">
+        <h2>Sky Map</h2>
+      </section>
+      <section id="section-settings" aria-label="App settings and preferences" class="hidden">
+        <h2>Settings</h2>
+      </section>
+    </main>
+    <footer></footer>
+    <div id="modal-overlay" class="hidden">
+      <div id="modal-content"></div>
+    </div>
+  </body>
+</html>
