@@ -47,7 +47,7 @@ export function drawCloudChart(data) {
 
   const labelSpace = 20;
   const maxHeight = canvas.height - labelSpace;
-  const barWidth = canvas.width / 7 - 4;
+  const barWidth = (canvas.width / 7) - 6;
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

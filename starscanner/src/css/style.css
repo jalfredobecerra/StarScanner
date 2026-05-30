@@ -94,7 +94,7 @@ nav {
     padding: var(--space-md);
 }
 
-nav span {
+nav h1 {
     font-family: var(--font-display);
     color: var(--star-gold);
     margin-right: auto;
@@ -124,7 +124,7 @@ nav button:hover {
 
 #dashboard-grid {
     display: grid;
-    grid-template-columns: 280px 1fr 300px;
+    grid-template-columns: 310px 1fr 400px;
     gap: var(--space-md);
     margin-top: var(--space-md);
 }
@@ -206,6 +206,172 @@ nav button:hover {
     display: none !important;
 }
 
+#journal-form-container {
+    background-color: var(--dark-panel);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--muted-gray);
+}
+
+#journal-form-container h3 {
+    color: var(--star-gold);
+    margin-bottom: var(--space-md);
+}
+
+#journal-date,
+#journal-location,
+#journal-notes,
+#journal-search {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--navy-panel);
+    border: 1px solid var(--muted-gray);
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-sm);
+}
+
+#journal-date:focus,
+#journal-location:focus,
+#journal-notes:focus,
+#journal-search:focus {
+    outline: none;
+    border-color: var(--star-gold);
+}
+
+#journal-notes {
+    height: 100px;
+    resize: vertical;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+
+#journal-submit {
+    background-color: var(--nebula-purple);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+#journal-submit:hover {
+    opacity: 0.85;
+}
+
+#surprise-btn {
+    background-color: var(--star-gold);
+    color: var(--deep-space-background);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+    margin-bottom: var(--space-md);
+}
+
+#surprise-btn:hover {
+    opacity: 0.85;
+}
+
+.modal-close-btn {
+    background: none;
+    border: 1px solid var(--muted-gray);
+    border-radius: var(--radius-sm);
+    color: var(--light-gray);
+    padding: var(--space-xs) var(--space-md);
+    margin-top: var(--space-md);
+    transition: border-color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    border-color: var(--star-gold);
+    color: var(--star-gold);
+}
+
+#journal-rating {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+#journal-rating button {
+    background: none;
+    border: 1px solid var(--muted-gray);
+    border-radius: var(--radius-sm);
+    color: var(--muted-gray);
+    width: 36px;
+    height: 36px;
+    font-size: var(--text-base);
+    transition: all 0.2s ease;
+}
+
+#journal-rating button:hover {
+    border-color: var(--star-gold);
+    color: var(--star-gold);
+}
+
+.event-card {
+    animation: fadeInUp 0.4s ease forwards;
+    animation-delay: calc(var(--i, 0) * 0.08s);
+    background-color: var(--navy-panel);
+    border-radius: var(--radius-sm);
+    padding: var(--space-md);
+    margin-bottom: var(--space-sm);
+    border-left: 3px solid var(--nebula-purple);
+}
+
+.event-card h3 {
+    color: var(--white);
+    font-size: var(--text-base);
+    margin-bottom: var(--space-xs);
+}
+
+.delete-btn {
+    background: none;
+    border: 1px solid var(--error-red);
+    border-radius: var(--radius-sm);
+    color: var(--error-red);
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--text-xs);
+    margin-top: var(--space-sm);
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: var(--error-red);
+    color: var(--white);
+}
+
+#section-journal {
+    padding: var(--space-md);
+}
+
+#journal-search {
+    margin-bottom: var(--space-md);
+}
+
+#journal-list {
+    margin-top: var(--space-sm);
+}
+
+#apod-panel p {
+    font-size: var(--text-sm);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 @media (max-width: 768px){
     #dashboard-grid {
         grid-template-columns: 1fr;
@@ -213,7 +379,7 @@ nav button:hover {
 }
 
 @media (max-width: 390px){
-    nav span {
+    nav h1 {
         font-size: var(--text-sm);
     }
     nav, #section-dashboard{
