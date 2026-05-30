@@ -129,6 +129,25 @@ nav button:hover {
     margin-top: var(--space-md);
 }
 
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    animation: fadeIn 0.25s ease forwards;
+}
+
+#modal-content {
+    background-color: var(--navy-panel);
+    max-width: 600px;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    animation: slideUp 0.3s ease forwards;
+}
+
 #dashboard-left,
 #upcoming-events,
 #dashboard-right,
@@ -142,6 +161,49 @@ nav button:hover {
     border-radius: var(--radius-md);
     padding: var(--space-md);
     border: 1px solid var(--muted-gray);
+}
+
+#apod-panel img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin: var(--space-sm) 0;
+}
+
+#iss-map {
+    width: 100%;
+    height: 160px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg");
+    background-size: cover;
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+#iss-marker {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--aurora-teal);
+    transform: translate(-50%, -50%);
+}
+
+#iss-marker::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--aurora-teal);
+    animation: pulse 2s ease-out infinite;
+}
+
+.event-card {
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+.hidden {
+    display: none !important;
 }
 
 @media (max-width: 768px){

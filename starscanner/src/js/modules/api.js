@@ -58,7 +58,7 @@ export async function fetchISSPasses(lat, lon) {
 export async function fetchWeather(lat, lon) {
   try {
     const response = await fetch(
-      `${METEO_BASE}/forecast?latitude=${lat}&longitude=${lon}&hourly=cloudcover,visibility,windspeed_10m,relativehumidity_2m,precipitation_probability,weathercode&forecast_days=7`,
+      `${METEO_BASE}/forecast?latitude=${lat}&longitude=${lon}&hourly=cloudcover,visibility,windspeed_10m,relativehumidity_2m,precipitation_probability,weathercode&forecast_days=7&past_days=7`,
     );
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
