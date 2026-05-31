@@ -56,7 +56,7 @@ function renderWeather(current, score) {
 
 export async function getTonightEvents() {
   try {
-    const response = await fetch(`/data/events.json`);
+    const response = await fetch(`${import.meta.env.BASE_URL}data/events.json`);
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
     }
@@ -114,7 +114,7 @@ export function renderAPOD(apod) {
 
 export async function surpriseMe() {
   try {
-    const response = await fetch(`/data/events.json`);
+    const response = await fetch(`${import.meta.env.BASE_URL}data/events.json`);
     if (!response.ok) {
       throw new Error(`API error: ${response.status}`);
     }
