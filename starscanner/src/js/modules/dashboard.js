@@ -14,6 +14,8 @@ export async function initDashboard() {
   const weatherData = await fetchWeather(lat, lon);
   const current = getCurrentWeather(weatherData);
   const score = calcObservingScore(current);
+  localStorage.setItem("lastLocation", city);
+  localStorage.setItem("lastScore", score);
   const events = await getTonightEvents();
   const apod = await fetchAPOD();
   const surpriseBtn = document.getElementById("surprise-btn");
