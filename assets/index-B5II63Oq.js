@@ -14,7 +14,7 @@
         <p>Humidity: ${e.humidity}%</p>
         <p>Wind: ${e.wind} km/h</p>
         <p>Visibility: ${e.visibility/1e3} km</p>
-        <p>Score: ${r} — ${t}</p>`}async function E(){try{let e=await fetch(`/data/events.json`);if(!e.ok)throw Error(`API error: ${e.status}`);let t=await e.json(),n=new Date().getTime(),r=n+10080*60*1e3;return t.filter(e=>{let t=new Date(e.date).getTime();return t>=n&&t<=r})}catch(e){return console.error(`getTonightEvents failed:`,e),null}}function D(e){let t=document.getElementById(`upcoming-events`);if(!e||e.length===0){t.innerHTML=`<p>No upcoming events in the next 7 days.</p>`;return}t.innerHTML=e.map((e,t)=>`
+        <p>Score: ${r} — ${t}</p>`}async function E(){try{let e=await fetch(`/StarScanner/data/events.json`);if(!e.ok)throw Error(`API error: ${e.status}`);let t=await e.json(),n=new Date().getTime(),r=n+10080*60*1e3;return t.filter(e=>{let t=new Date(e.date).getTime();return t>=n&&t<=r})}catch(e){return console.error(`getTonightEvents failed:`,e),null}}function D(e){let t=document.getElementById(`upcoming-events`);if(!e||e.length===0){t.innerHTML=`<p>No upcoming events in the next 7 days.</p>`;return}t.innerHTML=e.map((e,t)=>`
         <div class="event-card" style="--i: ${t}">
             <h3>${e.name}</h3>
             <p>${e.date}</p>
@@ -27,7 +27,7 @@
         <p>${e.explanation}</p>
         ${n}
         <a href="${e.hdurl}" target="_blank">View full resolution ↗</a>
-        <p>${e.copyright||`NASA`}</p>`}async function k(){try{let e=await fetch(`/data/events.json`);if(!e.ok)throw Error(`API error: ${e.status}`);let t=await e.json(),n=t[Math.floor(Math.random()*t.length)];x(`
+        <p>${e.copyright||`NASA`}</p>`}async function k(){try{let e=await fetch(`/StarScanner/data/events.json`);if(!e.ok)throw Error(`API error: ${e.status}`);let t=await e.json(),n=t[Math.floor(Math.random()*t.length)];x(`
             <h2>${n.name}</h2>
             <p>${n.date}</p>
             <p>${n.description}</p>
